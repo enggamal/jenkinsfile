@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('dev') {
             steps {
-                retry(3){
+                retry(3) {
                     sh '''
-                    docker ps
+                    doker ps
                     '''
                 }
             }
