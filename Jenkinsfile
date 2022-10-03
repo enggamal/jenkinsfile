@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('Example Build') {
             steps {
-                sh 'docker ps'
+                sh '''
+                pwd
+                ls
+                whoami
+                docker ps
+                '''
             }
         }
     }
