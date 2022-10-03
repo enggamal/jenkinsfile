@@ -2,3 +2,8 @@ retry(n) {
     sh ' dsfd ' 
 }
 this will repeat this process n times in case of fail 
+-------------------------------------------------------
+Executes the code inside the block with a determined time out limit. If the time limit is reached, an exception 
+(org.jenkinsci.plugins.workflow.steps.FlowInterruptedException) is thrown, 
+which leads in aborting the build (unless it is caught and processed somehow). 
+Unit is optional but defaults to minutes.
