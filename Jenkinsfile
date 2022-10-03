@@ -7,9 +7,9 @@ pipeline {
                     sh '''
                     docker ps
                     '''
-                timeout(time: 10, unit: 'SECONDS'){
+                timeout(time: 5, unit: 'SECONDS'){
                     sh '''
-                    sleep 5
+                    sleep 10
                     '''
                 }
             }
