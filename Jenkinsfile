@@ -3,11 +3,15 @@ pipeline {
     stages {
         stage('dev') {
             steps {
-                retry(3) {
+                
                     sh '''
-                    doker ps
+                    docker ps
                     '''
-                }
+                    timeout(time: 60, unit: 'SECONDS')
+                    sh '''
+                    docker ps
+                    '''
+                
             }
         }
       
