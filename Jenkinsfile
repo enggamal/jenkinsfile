@@ -7,11 +7,11 @@ pipeline {
                     sh '''
                     docker ps
                     '''
-                    timeout(time: 60, unit: 'SECONDS')
+                timeout(time: 60, unit: 'SECONDS'){
                     sh '''
                     docker ps
                     '''
-                
+                }
             }
         }
       
