@@ -1,7 +1,27 @@
 pipeline {
     agent any
     stages {
-        stage('Example Build') {
+        stage('dev') {
+            steps {
+                sh '''
+                pwd
+                ls
+                whoami
+                docker ps
+                '''
+            }
+        }
+         stage('test') {
+            steps {
+                sh '''
+                pwd
+                ls
+                whoami
+                docker ps
+                '''
+            }
+        }
+         stage('prod') {
             steps {
                 sh '''
                 pwd
