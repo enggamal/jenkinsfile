@@ -1,15 +1,15 @@
 pipeline {
     agent any
-    environment {
-        NAME = 'gamal'
-    }
+    // environment {
+    //     NAME = 'gamal'
+    // }
     stages {
-        stage('dev') {
+        stage('build jar file') {
             steps {
                 
                     sh '''
-                    docker ps
-                    echo $NAME
+                    ./mvn.sh mvn -B -DskipTests clean package
+                    ./build.sh 
                     '''
             }
         }
