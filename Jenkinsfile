@@ -16,6 +16,7 @@ pipeline {
         stage('test') {
             steps {
                 
+                
                     sh '''
                     docker ps
                     echo $NAME
