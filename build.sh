@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 cp jenk/java-app/target/*.jar  .
 
