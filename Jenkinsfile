@@ -11,11 +11,6 @@ pipeline {
                     docker ps
                     echo $NAME
                     '''
-                // timeout(time: 5, unit: 'SECONDS'){
-                //     sh '''
-                //     sleep 10
-                //     '''
-                // }
             }
         }
         stage('test') {
@@ -25,11 +20,6 @@ pipeline {
                     docker ps
                     echo $NAME
                     '''
-                // timeout(time: 5, unit: 'SECONDS'){
-                //     sh '''
-                //     sleep 10
-                //     '''
-                // }
             }
         }
     }
