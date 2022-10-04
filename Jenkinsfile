@@ -8,7 +8,7 @@ pipeline {
             steps {
                 
                     sh '''
-                    ./mvn.sh  /app/mvn -B -DskipTests clean package
+                    ./mvn.sh  mvn -B -DskipTests clean package
                     ./build.sh 
                     '''
             }
