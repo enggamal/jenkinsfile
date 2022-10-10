@@ -1,9 +1,27 @@
 pipeline {
     agent any
+    // environment {
+    //     NAME = 'gamal'
+    // }
     stages {
-        stage('Example Build') {
+        stage('build jar file') {
             steps {
-                sh 'docker ps'
+                
+                    sh '''
+                    ./mvn.sh  
+                    ./build.sh 
+                    '''
+            }
+        }
+        stage('test') {
+            steps {
+                
+
+                
+                    sh '''
+                    docker ps
+                    echo $NAME
+                    '''
             }
         }
     }
